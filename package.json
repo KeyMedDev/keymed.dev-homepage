@@ -1,0 +1,10 @@
+{
+  "name": "coming-soon-ascii",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --test --test-isolation=none tests/*.test.cjs",
+    "build:css": "npx @tailwindcss/cli -i src/tailwind.css -o assets/tailwind.css --minify"
+  }
+}

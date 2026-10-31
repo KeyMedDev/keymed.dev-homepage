@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b16">
+  <meta name="description" content="Algo nuevo está por llegar. Mientras tanto, nos vemos en Twitch.">
+  <title>Coming soon</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23081b16'/%3E%3Ctext x='9' y='28' fill='%23dfe8cf' font-family='monospace' font-size='27'%3E*%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="./assets/JetBrainsMono-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <!-- Tailwind browser oficial. styles.css conserva el diseño si no hay red. -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" async></script>
+  <script src="./config.js" defer></script>
+  <script src="./ascii-core.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body class="relative min-h-svh overflow-x-hidden antialiased">
+  <div class="landscape" aria-hidden="true">
+    <canvas id="landscape"></canvas>
+    <div class="shade"></div>
+    <div class="vignette"></div>
+  </div>
+  <div class="page relative flex min-h-svh flex-col">
+    <header class="flex items-center justify-between">
+      <a class="wordmark inline-flex items-center gap-3" href="./" aria-label="Inicio"><span class="asterisk" aria-hidden="true">✳</span> <span>en el horizonte</span></a>
+      <span class="edition">UN NUEVO COMIENZO / 001</span>
+    </header>
+    <main class="flex flex-1 items-center justify-center px-6 text-center">
+      <section class="hero" aria-labelledby="title">
+        <div class="eyebrow inline-flex items-center gap-3"><span class="status-dot" aria-hidden="true"></span> ALGO NUEVO ESTÁ CRECIENDO</div>
+        <h1 id="title" class="font-normal tracking-tighter">Coming soon<span class="title-period">.</span></h1>
+        <p class="description mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br class="desktop-break"> Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <a id="twitch-link" class="twitch-link inline-flex items-center justify-center gap-3" href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer">
+          <svg width="17" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3H22V15L16 21H11L8 24V21H3V7L5 3Z" stroke="currentColor" stroke-width="1.6" transform="translate(0 -1) scale(.92)"/><path d="M11 7V12M16 7V12" stroke="currentColor" stroke-width="1.8"/></svg>
+          Mientras tanto, nos vemos en Twitch <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <span class="small-note">Lo bueno toma su tiempo.</span>
+      </section>
+    </main>
+    <footer class="flex items-center justify-between gap-4">
+    </footer>
+  </div>
+  <noscript><p class="no-script">Activa JavaScript para ver el paisaje ASCII. El enlace de Twitch sigue disponible.</p></noscript>
+</body>
+</html>

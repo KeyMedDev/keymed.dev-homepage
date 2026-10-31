@@ -1,0 +1,4 @@
+/* Compilación opcional al disponer de red: npm run build:css.
+   Después sustituye el script CDN de index.html por un link a assets/tailwind.css. */
+@import "tailwindcss";
+@source "../index.html";
