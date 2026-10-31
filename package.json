@@ -1,9 +1,15 @@
 {
-  "name": "coming-soon-ascii",
+  "name": "keymed-dev-homepage",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i src/tailwind.css -o assets/tailwind.css --minify",
-    "test": "node --test --test-isolation=none tests/*.test.cjs"
+    "test": "node --experimental-vm-modules --test --test-isolation=none tests/animation.test.js",
+    "dev": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
+    "build": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --minify && node scripts/build.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
   }
 }

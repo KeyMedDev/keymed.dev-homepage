@@ -1,44 +1,41 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#081b16">
-  <meta name="description" content="Algo nuevo está por llegar. Mientras tanto, nos vemos en Twitch.">
-  <title>Coming soon</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23081b16'/%3E%3Ctext x='9' y='28' fill='%23dfe8cf' font-family='monospace' font-size='27'%3E*%3C/text%3E%3C/svg%3E">
-  <link rel="preload" href="./assets/JetBrainsMono-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="./styles.css">
-  <!-- Tailwind browser oficial. styles.css conserva el diseño si no hay red. -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" async></script>
-  <script src="./config.js" defer></script>
-  <script src="./ascii-core.js" defer></script>
-  <script src="./app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b16">
+  <meta name="description" content="KeyMed.dev · Algo nuevo está creciendo. Mientras tanto, nos vemos en Twitch.">
+  <meta name="application-name" content="KeyMed.dev">
+  <title>Coming soon · KeyMed.dev</title>
+  <link rel="icon" href="./assests/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assests/fotns/JetBrainsMono-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./src/styles/output.css">
+  <script type="module" src="./src/js/main.js"></script>
 </head>
-<body class="relative min-h-svh overflow-x-hidden antialiased">
-  <div class="landscape" aria-hidden="true">
-    <canvas id="landscape"></canvas>
-    <div class="shade"></div>
-    <div class="vignette"></div>
-  </div>
-  <div class="page relative flex min-h-svh flex-col">
-    <header class="flex items-center justify-between">
-      <a class="wordmark inline-flex items-center gap-3" href="./" aria-label="Inicio"><span class="asterisk" aria-hidden="true">✳</span> <span>en el horizonte</span></a>
-      <span class="edition">UN NUEVO COMIENZO / 001</span>
-    </header>
-    <main class="flex flex-1 items-center justify-center px-6 text-center">
-      <section class="hero" aria-labelledby="title">
-        <div class="eyebrow inline-flex items-center gap-3"><span class="status-dot" aria-hidden="true"></span> ALGO NUEVO ESTÁ CRECIENDO</div>
-        <h1 id="title" class="font-normal tracking-tighter">Coming soon<span class="title-period">.</span></h1>
-        <p class="description mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br class="desktop-break"> Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-        <a id="twitch-link" class="twitch-link inline-flex items-center justify-center gap-3" href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer">
-          <svg width="17" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3H22V15L16 21H11L8 24V21H3V7L5 3Z" stroke="currentColor" stroke-width="1.6" transform="translate(0 -1) scale(.92)"/><path d="M11 7V12M16 7V12" stroke="currentColor" stroke-width="1.8"/></svg>
-          Mientras tanto, nos vemos en Twitch <span class="arrow" aria-hidden="true">↗</span>
-        </a>
-        <span class="small-note">Lo bueno toma su tiempo.</span>
-      </section>
-    </main>
-    <footer class="flex items-center justify-between gap-4"></footer>
-  </div>
+<body class="relative min-h-svh overflow-x-hidden bg-forest font-mono text-cream antialiased">
+  <div class="landscape" aria-hidden="true"><canvas id="ascii-background"></canvas></div>
+  <header class="absolute inset-x-0 top-0 z-10 flex items-center justify-between gap-6 px-6 py-8 sm:px-10 lg:px-[4%] lg:py-12">
+    <a href="./" class="brand inline-flex items-center gap-3 text-xs no-underline" aria-label="KeyMed.dev, inicio">
+      <svg class="h-6 w-6 text-sage" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 1v30M1 16h30M5.4 5.4l21.2 21.2M5.4 26.6 26.6 5.4" stroke="currentColor" stroke-width="1.3"/><path d="m11 4 10 24M4 11l24 10M4 21l24-10M11 28 21 4" stroke="currentColor" stroke-width=".7"/></svg>
+      <span>KeyMed.dev</span>
+    </a>
+  </header>
+  <main class="relative z-10 flex min-h-svh items-center justify-center px-6 py-32">
+    <section class="w-full text-center" aria-labelledby="coming-soon">
+      <article class="hero mx-auto max-w-5xl">
+        <div>
+          <p class="eyebrow text-[10px] uppercase tracking-[.24em]">Algo nuevo está creciendo</p>
+          <h1 id="coming-soon" class="title font-normal tracking-[-.065em]">Coming soon<span class="text-sage">.</span></h1>
+          <p class="description mx-auto max-w-xl text-xs leading-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br class="hidden sm:block"> Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <a id="twitch-link" href="https://www.twitch.tv/keymeddev" target="_blank" rel="noopener noreferrer" class="twitch-link mx-auto inline-flex items-center justify-center gap-3 text-xs no-underline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.149 0 .537 4.119v16.835h5.731V24h3.224l3.045-3.046h4.657L23.463 14.866V0H2.149Zm19.164 13.79-3.582 3.582H12l-3.045 3.045v-3.045H4.119V2.149h17.194V13.79Zm-3.582-7.881v6.269h-2.149V5.909h2.149Zm-5.731 0v6.269H9.851V5.909H12Z"/></svg>
+            <span>Mientras tanto, nos vemos en Twitch</span>
+            <svg class="external-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="tagline absolute inset-x-0 z-10 px-6 text-center text-[10px]">Lo bueno toma su tiempo</footer>
 </body>
 </html>
